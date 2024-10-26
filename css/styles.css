@@ -137,6 +137,7 @@ img {
   background-color: #2e2f42;
   padding: 188px 0;
   text-align: center;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7) ), url(../images/hero-img.jpg);
 }
 
 .title {
@@ -215,6 +216,15 @@ img {
   justify-content: flex-start;
   flex-direction: column;
   width: calc((100% - 72px) / 4);
+}
+
+.advantages-item-icon {
+   background: #f4f4fd;
+   border: 1px solid #8e8f99;
+   border-radius: 4px;
+   width: 264px;
+   height: 112px;
+   fill: #2e2f42;
 }
 
 .advantages-subtitle,
