@@ -218,14 +218,21 @@ img {
   width: calc((100% - 72px) / 4);
 }
 
-.advantages-item-icon {
+.advantages-item-wrap {
    background: #f4f4fd;
    border: 1px solid #8e8f99;
    border-radius: 4px;
    width: 264px;
    height: 112px;
-   fill: #2e2f42;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 8px;
 }
+
+ advantages-item-icon {
+    fill: #2e2f42;
+ }
 
 .advantages-subtitle,
 .team-title,
@@ -290,6 +297,21 @@ img {
 .team-text {
   text-align: center;
 }
+
+.team-card-icons {
+  display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+gap: 24px;
+width: 232px;
+height: 40px;
+}
+
+.team-card-item {
+  width: 40px;
+  height: 40px;
+ }
 
 .advantages-title,
 .team-title,
