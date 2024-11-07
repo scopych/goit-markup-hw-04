@@ -59,6 +59,7 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .logo {
@@ -102,12 +103,12 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-link::after {
+.navigation-link-studio::after {
   content: ""; /* Empty content to create the line */
   position: absolute;
   left: 0;
-  bottom: -2px; /* Adjusts the position to appear just below the text */
-  width: 0;
+  bottom: -1px; /* Adjusts the position to appear just below the text */
+  width: 100%;
   height: 4px; /* Thickness of the underscore */
   background-color: #404bbf; /* Color of the underscore */
   border-radius: 2px;
@@ -120,6 +121,10 @@ img {
 
 .navigation-link:hover,
 .navigation-link:focus {
+  color: #404bbf;
+}
+
+.navigation-link-studio {
   color: #404bbf;
 }
 
@@ -149,6 +154,7 @@ img {
 /* Hero */
 
 .hero {
+  max-width: 1440px;
   background-color: #2e2f42;
   padding: 188px 0;
   text-align: center;
@@ -157,6 +163,9 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .title {
@@ -185,12 +194,12 @@ img {
   border: none;
   background: #4d5ae5;
   border-radius: 4px;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background: #404bbf;
+  background-color: #404bbf;
   cursor: pointer;
 }
 
@@ -256,8 +265,7 @@ img {
   top: 0;
   background-color: #4d5ae5;
   height: 100%;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding: 40px 32px;
   display: flex;
   align-items: center;
   transform: translateY(100%);
@@ -364,6 +372,10 @@ advantages-item-icon {
   height: 40px;
 }
 
+.team-card-icon, .footer-icon {
+  fill: #f4f4fd;
+}
+
 .team-card-item {
   width: 40px;
   height: 40px;
@@ -378,6 +390,11 @@ advantages-item-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card-link:hover,  .team-card-link:focus {
+  background-color: #404bbf;
 }
 
 .advantages-title,
@@ -397,6 +414,11 @@ advantages-item-icon {
 .footer-wrap {
   display: flex;
   gap: 100px;
+  align-items: baseline;
+}
+
+.footer-logo-block {
+  margin-right: 120px;
 }
 
 .logo-link {
@@ -433,10 +455,11 @@ advantages-item-icon {
   gap: 16px;
 }
 
+
 .footer-link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-link:hover {
+.footer-link:hover, .footer-link:focus {
   background-color: #31d0aa;
 }
